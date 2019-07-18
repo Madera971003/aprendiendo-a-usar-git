@@ -126,6 +126,74 @@ Por último se escribe lo siguiente; es muy importante que le escribas ".pub":
 
 * **Paso 4**: Nos aparecerá una ventana como la siguiente:
 
-![repositorio](./assets/repositorio-creado.png "Repositorio")
+![Repositorio](./assets/repositorio-creado.png "Repositorio")
 
 ## Cómo agregar archivos a un Repositorio desde el Git Bash
+
+* **Paso 1**: primero abrimos Git Bash y nos vamos a la ubicación de la carpeta con el proyecto que pretendes subir.
+
+![Proyecto1](./assets/proyecto.png "Ubicación del proyecto")
+
+![Proyecto2](./assets/proyecto-git-bash.png "Ubicación del proyecto en Gut Bash")
+
+* **Paso 2**: ahora se escribe el siguiente comando para inicializar:
+
+```python
+git init
+```
+
+Deberá aparecer la palabra "master".
+
+![Inicialización](./assets/init.png "Inicialización")
+
+* **Paso 3**: del paso 4 de lo anterior, en la imagen en mi caso aparece el comando sig:
+
+```python
+git remote add origin git@github.com:Madera971003/aprendiendo-a-usar-git.git
+```
+
+En tu caso deberás copiar el que te aparece a ti en la línea de comandos, de la siguiente forma dando un enter:
+
+![Remote](./assets/remote.png "Creación remota")
+
+* **Paso 4**: ahora ya podemos empezar a agregar nuestro pequeño proyecto. Usando uno de los comandos de abajo, agregamos los archivos.
+
+Este comando, nos agregará todos los archivos que tenemos en la carpeta donde estamos ubicado.
+
+```python
+git add -A
+```
+
+![Agregar todo](./assets/agregar-todo.png "Comando para agregar todos los archivos")
+
+Este comando, nos agrega un archivo en específico. Debes poner la extensión del archivo que estes agregando.
+
+```python
+git add name-file.extension
+```
+
+* **Paso 5**: algo que debes tomar en cuenta siempre, aunque sea un poco aburrido, tardado o quizá "innecesario", es poner comentarios siempre de que estes modificando, o que estes realizando alguna acción.
+
+Los comentarios se ponen de la siguiente manera con las comillas:
+
+```python
+git commit -m "Comentario  de la acción que estes haciendo"
+```
+
+![Comentarios](./assets/commit.png "Agregar comentarios a una acción")
+
+* **Paso 6**: para que todos los archivos queden visualizados en la cuenta de Git Hub, es necesario el siguiente comando:
+
+Este comando solo se usa una primera vez.
+
+```python
+git push -u origin master
+```
+
+![Git Push](./assets/git-push.png "Git Push")
+
+Para modificaciones a futuro, solo se usa:
+
+```python
+git push
+```
