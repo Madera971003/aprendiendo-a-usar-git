@@ -1,5 +1,13 @@
 # Curso básico del uso y configuración de git
 
+- [Curso básico del uso y configuración de git](#Curso-b%C3%A1sico-del-uso-y-configuraci%C3%B3n-de-git)
+  - [Descarga del programa para tener la terminal de Git Bash](#Descarga-del-programa-para-tener-la-terminal-de-Git-Bash)
+  - [Crear una cuenta en github](#Crear-una-cuenta-en-github)
+  - [Configuración en la terminal de git para relacionar tu computador con tu cuenta de GitHub](#Configuraci%C3%B3n-en-la-terminal-de-git-para-relacionar-tu-computador-con-tu-cuenta-de-GitHub)
+  - [Agregar una clave rsa en Git Hub](#Agregar-una-clave-rsa-en-Git-Hub)
+  - [Creación de un nuevo repositorio](#Creaci%C3%B3n-de-un-nuevo-repositorio)
+  - [Cómo agregar archivos a un Repositorio desde el Git Bash](#C%C3%B3mo-agregar-archivos-a-un-Repositorio-desde-el-Git-Bash)
+
 ## Descarga del programa para tener la terminal de Git Bash
 
 * **Paso 1**: entramos a la página de [git-scm.com](https://git-scm.com) para descargar nuestro archivo de instalación. Nos encontraremos con una ventana como la que se mostrará más adelante; o quiza una diferente dependiendo en que año estes siguiendo esta información.
@@ -45,7 +53,7 @@ Cuando mencione alguna línea de comando, derás quitar las comillas, al menos q
 
 * **Paso 4**: vamos a iniciar a escribir los primeros comandos. Primero escribe el siguiente comando, así como se muestra en la imagen y das enter:
 
-```python
+```Bash
 git config --global user.name "aquí agregas el nombre de usuario de tu cuenta de Git Hub con las comillas"
 ```
 
@@ -53,7 +61,7 @@ git config --global user.name "aquí agregas el nombre de usuario de tu cuenta d
 
 * **Paso 5**: ahora se agregará el correo que usaste cuando creaste tu cuenta de Git Hub con el siguiente comando como se muestra en la imagen, y das enter:
 
-```python
+```Bash
 git config --global user.email Aquí-escribes-tu-correo-pero-sin-comillas
 ```
 
@@ -61,7 +69,7 @@ git config --global user.email Aquí-escribes-tu-correo-pero-sin-comillas
 
 * **Paso 6**: para verificar que todo este hecho de manera correcta, verificamos con el siguiente comando y das enter:
 
-```python
+```Bash
 git config --list
 ```
 
@@ -71,7 +79,7 @@ Los datos que ingresaste, deberan estar hasta el final como se muestra en la ima
 
 * **Paso 7**: ahora se generará una clave ssh usando el siguiente comando:
 
-```python
+```Bash
 ssh-keygen -o -t rsa -b 4096 -C "aquí agregas tu correo con las comillas"
 ```
 
@@ -138,7 +146,7 @@ Por último se escribe lo siguiente; es muy importante que le escribas ".pub":
 
 * **Paso 2**: ahora se escribe el siguiente comando para inicializar:
 
-```python
+```Bash
 git init
 ```
 
@@ -148,7 +156,7 @@ Deberá aparecer la palabra "master".
 
 * **Paso 3**: del paso 4 de lo anterior, en la imagen en mi caso aparece el comando sig:
 
-```python
+```Bash
 git remote add origin git@github.com:Madera971003/aprendiendo-a-usar-git.git
 ```
 
@@ -160,7 +168,7 @@ En tu caso deberás copiar el que te aparece a ti en la línea de comandos, de l
 
 Este comando, nos agregará todos los archivos que tenemos en la carpeta donde estamos ubicado.
 
-```python
+```Bash
 git add -A
 ```
 
@@ -168,7 +176,7 @@ git add -A
 
 Este comando, nos agrega un archivo en específico. Debes poner la extensión del archivo que estes agregando.
 
-```python
+```Bash
 git add name-file.extension
 ```
 
@@ -176,7 +184,7 @@ git add name-file.extension
 
 Los comentarios se ponen de la siguiente manera con las comillas:
 
-```python
+```Bash
 git commit -m "Comentario  de la acción que estes haciendo"
 ```
 
@@ -186,7 +194,7 @@ git commit -m "Comentario  de la acción que estes haciendo"
 
 Este comando solo se usa una primera vez.
 
-```python
+```Bash
 git push -u origin master
 ```
 
@@ -194,6 +202,6 @@ git push -u origin master
 
 Para modificaciones a futuro, solo se usa:
 
-```python
+```Bash
 git push
 ```
