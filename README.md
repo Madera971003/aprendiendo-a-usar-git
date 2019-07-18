@@ -23,7 +23,7 @@
 
 ## Crear una cuenta en github
 
-Antes de continuar con la configuración de la terminal de git, es muy importante tener una cuenta en github; por lo tanto te explicaré brevemente como crearla. Algo muy importante es que debes tener una cuenta de correo que puedas tener acceso a el, ya que tengras que realizar una verificación durante el proceso. Si no tienes una cuenta de correo, deberás crearla.
+Antes de continuar con la configuración de la terminal de git, es muy importante tener una cuenta en github; por lo tanto te explicaré brevemente como crearla. Algo muy importante, es que debes tener una cuenta de correo que puedas tener acceso a el, ya que tendras que realizar una verificación durante el proceso. Si no tienes una cuenta de correo, deberás crearla.
 
 * **Paso 1**: primeramente nos vamos a dirigir a la página principal de [github.com](https://github.com) para poder crear una cuenta nueva. si tu ya tienes una cuenta creada, puedes omitir estos pasos y dirigirte directamente a la configuracion en la terminal.
     Entrando al link de arriba, nos aparecerá una ventana como la siguiente:
@@ -50,7 +50,7 @@ Cuando mencione alguna línea de comando, derás quitar las comillas, al menos q
 
 ![inicio-gitbash](./assets/ventana-inicio-gitbash.png "Ventana de inicio del Git Bash")
 
-* **Paso 3**: En caso que se inicie con una ubicación diferente, puedes poner en la linea de comandos lel siguiente comando, sin las comillas "cd ~" y das enter; te deberá aparecer como la imagen anterior.
+* **Paso 3**: En caso que se inicie con una ubicación diferente, puedes poner en la linea de comandos el siguiente comando, sin las comillas "cd ~" y das enter; te deberá aparecer como la imagen anterior.
 
 * **Paso 4**: vamos a iniciar a escribir los primeros comandos. Primero escribe el siguiente comando, así como se muestra en la imagen y das enter:
 
@@ -85,7 +85,7 @@ ssh-keygen -o -t rsa -b 4096 -C "aquí agregas tu correo con las comillas"
 ```
 
 Una vez que le des enter, empezará a cargar, en mi caso ya tenía uno existente y me pidió si quería sobreescribir, por eso le escribí "y" para decirle que SÍ.
-Después pide que se agregue unsa frase; te recomiendo que solo le des enter, porque luego puedo que pase que no recuerdes la frase. Y te pedirá que confirmes la frase, pero le vuelves a dar enter.
+Después pide que se agregue unsa frase; te recomiendo que solo le des enter, porque luego puede que no recuerdes la frase. Y te pedirá que confirmes la frase, pero le vuelves a dar enter.
 Al final quedará creado el ssh en la ubucación como se marca en la imagen:
 
 ![creacion de ssh](./assets/creacion-de-ssh.png "Comando para crear el ssh")
@@ -213,7 +213,7 @@ Resgresear a versiones antiguas, es de mucha utilidad. En muchas ocaciones reali
 Por eso es muy importante que los comentarios que agregas sean lo más descriptivo posible, para que sepas en que versión debes regresar. Ya que si cometes el error en regresar en una versión que no era la que querías, ya no podras regresar a versiones "futuras".
 Más adelante se muestra como realizarlo.
 
-* **Paso 1**: primero debes ver las versiones que has hecho y las cosas que has modificado, para que sepas a que versión debes regresar; por lo tanto se usar el comando siguiente:
+* **Paso 1**: primero debes ver las versiones que has hecho y las cosas que has modificado, para que sepas a que versión debes regresar; por lo tanto se usa el comando siguiente:
 
 ```Bash
 git log
