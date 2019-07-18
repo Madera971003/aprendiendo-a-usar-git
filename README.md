@@ -7,6 +7,7 @@
   - [Agregar una clave rsa en Git Hub](#Agregar-una-clave-rsa-en-Git-Hub)
   - [Creación de un nuevo repositorio](#Creaci%C3%B3n-de-un-nuevo-repositorio)
   - [Cómo agregar archivos a un Repositorio desde el Git Bash](#C%C3%B3mo-agregar-archivos-a-un-Repositorio-desde-el-Git-Bash)
+  - [Regresar a versiones antiguas](#Regresar-a-versiones-antiguas)
 
 ## Descarga del programa para tener la terminal de Git Bash
 
@@ -205,3 +206,17 @@ Para modificaciones a futuro, solo se usa:
 ```Bash
 git push
 ```
+
+## Regresar a versiones antiguas
+
+Resgresear a versiones antiguas, es de mucha utilidad. En muchas ocaciones realizamos modificaciones que no nos gustan y queremos la versión anterior. En Git Hub tienes la opción de regresar a versiones anteriores.
+Por eso es muy importante que los comentarios que agregas sean lo más descriptivo posible, para que sepas en que versión debes regresar. Ya que si cometes el error en regresar en una versión que no era la que querías, ya no podras regresar a versiones "futuras".
+Más adelante se muestra como realizarlo.
+
+* **Paso 1**: primero debes ver las versiones que has hecho y las cosas que has modificado, para que sepas a que versión debes regresar; por lo tanto se usar el comando siguiente:
+
+```Bash
+git log
+```
+
+![Versiones](./assets/versiones.png "Versiones de las modificaciones realizadas")
