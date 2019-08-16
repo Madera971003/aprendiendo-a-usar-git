@@ -1,13 +1,13 @@
 # Curso básico del uso y configuración de git
 
-- [Curso básico del uso y configuración de git](#Curso-b%C3%A1sico-del-uso-y-configuraci%C3%B3n-de-git)
-  - [Descarga del programa para tener la terminal de Git Bash](#Descarga-del-programa-para-tener-la-terminal-de-Git-Bash)
-  - [Crear una cuenta en github](#Crear-una-cuenta-en-github)
-  - [Configuración en la terminal de git para relacionar tu computador con tu cuenta de GitHub](#Configuraci%C3%B3n-en-la-terminal-de-git-para-relacionar-tu-computador-con-tu-cuenta-de-GitHub)
-  - [Agregar una clave rsa en Git Hub](#Agregar-una-clave-rsa-en-Git-Hub)
-  - [Creación de un nuevo repositorio](#Creaci%C3%B3n-de-un-nuevo-repositorio)
-  - [Cómo agregar archivos a un Repositorio desde el Git Bash](#C%C3%B3mo-agregar-archivos-a-un-Repositorio-desde-el-Git-Bash)
-  - [Regresar a versiones antiguas](#Regresar-a-versiones-antiguas)
+- [Curso básico del uso y configuración de git](#curso-b%c3%a1sico-del-uso-y-configuraci%c3%b3n-de-git)
+  - [Descarga del programa para tener la terminal de Git Bash](#descarga-del-programa-para-tener-la-terminal-de-git-bash)
+  - [Crear una cuenta en github](#crear-una-cuenta-en-github)
+  - [Configuración en la terminal de git para relacionar tu computador con tu cuenta de GitHub](#configuraci%c3%b3n-en-la-terminal-de-git-para-relacionar-tu-computador-con-tu-cuenta-de-github)
+  - [Agregar una clave rsa en Git Hub](#agregar-una-clave-rsa-en-git-hub)
+  - [Creación de un nuevo repositorio](#creaci%c3%b3n-de-un-nuevo-repositorio)
+  - [Cómo agregar archivos a un Repositorio desde el Git Bash](#c%c3%b3mo-agregar-archivos-a-un-repositorio-desde-el-git-bash)
+  - [Regresar a versiones antiguas](#regresar-a-versiones-antiguas)
 
 ## Descarga del programa para tener la terminal de Git Bash
 
@@ -221,4 +221,4 @@ git log
 
 ![Versiones](./assets/versiones.png "Versiones de las modificaciones realizadas")
 
-Algo nuevo
+**Aún faltan más pasos :( .**
