@@ -86,6 +86,8 @@ Los datos que ingresaste, deberan estar hasta el final como se muestra en la ima
 ssh-keygen -o -t rsa -b 4096 -C "aquí agregas tu correo con las comillas"
 ```
 
+Las claves que se vana generar es una pública y una privada. Debes tener mucho cuidado con el uso de la clave privada, esa la debes mantener tu.
+
 Una vez que le des enter, empezará a cargar, en mi caso ya tenía uno existente y me pidió si quería sobreescribir, por eso le escribí "y" para decirle que SÍ.
 Después pide que se agregue unsa frase; te recomiendo que solo le des enter, porque luego puede que no recuerdes la frase. Y te pedirá que confirmes la frase, pero le vuelves a dar enter.
 Al final quedará creado el ssh en la ubucación como se marca en la imagen:
@@ -99,7 +101,7 @@ Primero vamos a la ubicación del archivo, y hacemos lo siguiente como se muestr
 
 ![Git Bash](./assets/dir-id-rsa.png "Como empezar el Git Bash desde una ubicación deseada")
 
-Por último se escribe lo siguiente; es muy importante que le escribas ".pub":
+Por último se escribe lo siguiente; es muy importante que le escribas ".pub", ya que son dos claves creadas, una pública con extensión .pub y la privada:
 
 ![cambio de directorio](./assets/abrir-rsa.png "Comando para abrir el archivo id-rsa")
 
