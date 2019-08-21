@@ -137,6 +137,8 @@ Por último se escribe lo siguiente; es muy importante que le escribas ".pub", y
 
 * **Paso 4**: Nos aparecerá una ventana como la siguiente:
 
+Si seleccionas inicializar con un README, es muy probable que no te muestre esa ventana, pero no hay problema; de todos modos más adelante explico cómo subir un proyecto al repositorio.
+
 ![Repositorio](./assets/repositorio-creado.png "Repositorio")
 
 ## Cómo agregar archivos a un Repositorio desde el Git Bash
@@ -155,6 +157,10 @@ git init
 
 Deberá aparecer la palabra "master".
 
+Una vez inicializado tu carpeta con la palabra init, ya no es necesario inicializar en alguna otra ocasión. Solo debes inicializar cuando es en una carpeta diferente.
+
+Si en la carpeta donde creaste el init, creas una carpeta más, tampoco es necesario que inicialices adentro de esta, al menos que así lo desees.
+
 ![Inicialización](./assets/init.png "Inicialización")
 
 * **Paso 3**: del paso 4 de lo anterior, en la imagen en mi caso aparece el comando sig:
@@ -162,6 +168,8 @@ Deberá aparecer la palabra "master".
 ```Bash
 git remote add origin git@github.com:Madera971003/aprendiendo-a-usar-git.git
 ```
+
+Existen dos links que te pueden aparecer, una es usando SSH y otra usando HTTPS. También más adelante estan los pasos en caso que quieras cambiarlo.
 
 En tu caso deberás copiar el que te aparece a ti en la línea de comandos, de la siguiente forma dando un enter:
 
@@ -173,6 +181,12 @@ Este comando, nos agregará todos los archivos que tenemos en la carpeta donde e
 
 ```Bash
 git add -A
+```
+
+O también puedes usar el comando siguiente:
+
+```Bash
+git add .
 ```
 
 ![Agregar todo](./assets/agregar-todo.png "Comando para agregar todos los archivos")
@@ -193,6 +207,14 @@ git commit -m "Comentario  de la acción que estes haciendo"
 
 ![Comentarios](./assets/commit.png "Agregar comentarios a una acción")
 
+Pero también te puedes ahorra tiempo con el siguiente comando:
+
+```Bash
+git commit -am "Comentario que desees poner en esta parte de los cambios realizados"
+```
+
+El comando anterior, sirve para agregar todos los archivos, y al mismo tiempo colocar el comentario
+
 * **Paso 6**: para que todos los archivos queden visualizados en la cuenta de Git Hub, es necesario el siguiente comando:
 
 Este comando solo se usa una primera vez.
@@ -200,6 +222,14 @@ Este comando solo se usa una primera vez.
 ```Bash
 git push -u origin master
 ```
+
+También puedes utilizar el siguiente:
+
+```Bash
+git push origin master
+```
+
+Cuando le pones master, los cambios se van al master; en caso que no quieres eso, ponlo a la rama que quieras.
 
 ![Git Push](./assets/git-push.png "Git Push")
 
