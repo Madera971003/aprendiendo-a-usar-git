@@ -251,6 +251,84 @@ Más adelante se muestra como realizarlo.
 git log
 ```
 
+Existen algunas formas de cómo puedes visualizar tu historial de trabajo o versiones. Te dejo algunas formas:
+
+Las versiones de las primeras líneas, seran las versiones más recientes, mientras que las de abajo, seran las más antiguas.
+
+Muestra todos los comentarios con detalles.
+
+```Bash
+git log --all
+```
+
+Te muestra los comentarios con detalles y la ramificación.
+
+```Bash
+git log --all --graph
+```
+
+Te muestra cada comentario y detalles con su ramificación; es algo similar al anterior.
+
+```Bash
+git log --all --graph --decorate
+```
+
+Te muestra cada uno de los comentarios que has hecho sin tantos detalles.
+
+```Bash
+git log --all --graph --decorate --oneline
+```
+
+Muestra detalles a grandes rasgos.
+
+```Bash
+git log --all --graph --decorate --oneline --simplify-by-decoration
+```
+
 ![Versiones](./assets/versiones.png "Versiones de las modificaciones realizadas")
 
-**Aún faltan más pasos :( .**
+Existen dos comandos diferentes que ayudan a regresar a versiones anteriores.
+
+```Bash
+git reset <version> --hard
+```
+
+```Bash
+git reset <version> --soft
+```
+
+Te explico. Cuando tu haces una modificación a tu proyecto, por lo regular agregas esos cambios y luego agregas un comentario; eso es como si tus cambios estubieran al "aire"(menciono "aire" para que te des una idea, no es que sea literal) esperando subirse a la nube, es decir a Github. El comando --soft, te regresará a la versión que quieres, pero aun te mantiene ese archivo que estaba en el "aire". En cambio el comando --hard, que es el más usado, eliminará todo hasta llegar a la versión que querías.
+
+* **Paso2**: como se puede ver en la imagen, esta el contenido del archivo, y cada uno de los cambios realizados. Ahora se elige la versión a la que se desea regresar copiando el código del commit.
+
+![Selección de versión](./assets/seleccion-version.png "Selección de versión")
+
+* **Paso3**: ahora se escribe el código mencionado anteriormente, con el código de la versión.
+
+```Bash
+git reset b011ec5681901a66a5728cd75c6fc56d4b2a04f8 --hard
+```
+
+![Regreso a la versión inicial](./assets/regreso-version.png "Regreso a la versión inicial")
+
+![Comprobación del regreso de versión](./assets/comprobacion-regreso-version.png "Comprobación de regreso de versión")
+
+Quiza en este momento te este preguntando, qué pasaría si agregaras uno de los códigos cortos cuando usas un ``git log`` diferente. Bueno, pues pasaría exactamente lo mismo, ya que esos códigos que son más cortos, son suficientemente diferente de los demás.
+
+Ahora haciendo la prueba con el ``--soft``
+
+En la imagen se puede ver solo me quede hasta la parte donde he subido el archivo. Así que allí aplicaré el comando.
+
+![Regreso de versión con soft](./assets/regreso-version-soft.png "Regreso de versión con soft")
+
+Ahora como se puede ver en la imagen, no se ha perdido las midificaciones pero si aplico ``git log``, ya no me aparecen las versiones anteriores.
+
+![Comprobación de soft](./assets/soft-comprobacion.png "Comprobación de soft")
+
+Por último ponemos un commit para que se suba la modificación y quede guardado. Después comprobamos con ``git log``.
+
+En la imagen siguiente se muestra la imagen de lo que paso. Te explico.
+
+Cuando trabajamos en un proyecto subimos modificaciones que no son tan relevantes que esten apareciendo en el historial. Una buena opción es usar el ``--soft`` para ello tienes que primero aplicar en el último cambio la agregación de archivo o archivos: ``git add .`` para que quede en el "aire" tus documentos. Después aplicas el ``git reset <version> --soft``, y por último agregas el comentario y compruebas con ``git log`` y te debió haber eliminado todos los commits intermedios.
+
+![Comprobación de soft](./assets/final-soft.png "Comprobación de versiones existentes")
