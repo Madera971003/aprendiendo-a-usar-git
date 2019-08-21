@@ -78,7 +78,9 @@ Los datos que ingresaste, deberan estar hasta el final como se muestra en la ima
 
 ![list](./assets/list.png "Comprobación que los datos esten correctamente")
 
-* **Paso 7**: ahora se generará una clave ssh usando el siguiente comando:
+## Agregar una clave rsa en Git Hub
+
+* **Paso 1**: ahora se generará una clave ssh usando el siguiente comando:
 
 ```Bash
 ssh-keygen -o -t rsa -b 4096 -C "aquí agregas tu correo con las comillas"
@@ -90,9 +92,7 @@ Al final quedará creado el ssh en la ubucación como se marca en la imagen:
 
 ![creacion de ssh](./assets/creacion-de-ssh.png "Comando para crear el ssh")
 
-## Agregar una clave rsa en Git Hub
-
-* **Paso 1**: ahora se abrirá el archivo id-rsa en la ubicación que se marcó en la linea de comandos de la siguiente:
+* **Paso 2**: ahora se abrirá el archivo id-rsa en la ubicación que se marcó en la linea de comandos de la siguiente:
 
 Este archivo, contiene por así decirlo, la clave que se usará para hacer la conexión entre nuestra cuenta de Git Hub y nuestro computador.
 Primero vamos a la ubicación del archivo, y hacemos lo siguiente como se muestra en la imagen, clic derecho y seleccionamos "Git Bash Here":
@@ -103,19 +103,19 @@ Por último se escribe lo siguiente; es muy importante que le escribas ".pub":
 
 ![cambio de directorio](./assets/abrir-rsa.png "Comando para abrir el archivo id-rsa")
 
-* **Paso 2**: ahora deberás ir a tu cuenta de Git Hub, y seleccionamos "Settings".
+* **Paso 3**: ahora deberás ir a tu cuenta de Git Hub, y seleccionamos "Settings".
 
 ![Settings](./assets/repositories-and-settings.png "Selección de Settings")
 
-* **Paso 3**: nos aparecera algo como esto. Y estando en esta parte, se selecciona la opción de "SSH and GPG keys".
+* **Paso 4**: nos aparecera algo como esto. Y estando en esta parte, se selecciona la opción de "SSH and GPG keys".
 
 ![SSH and GPG keys](./assets/ssh-keys.png "Selección de opción de SSH and GPH keys")
 
-* **Paso 4**: vamos a darle clic en la opción de "New SSH key" para agregar uno nuevo.
+* **Paso 5**: vamos a darle clic en la opción de "New SSH key" para agregar uno nuevo.
 
 ![neva clave](./assets/add-key.png "Creación de nueva clave ssh")
 
-* **Paso 5**: agregamos un nombre a nuestra clave y copiamos el texto que contiene nuestro id-rsa de la línea de comandos, le damos agregar y después nos pedira la contraseña de la cuenta para confirmar.
+* **Paso 6**: agregamos un nombre a nuestra clave y copiamos el texto que contiene nuestro id-rsa de la línea de comandos, le damos agregar y después nos pedira la contraseña de la cuenta para confirmar.
 
 ![finalización de la nueva id](./assets/fin-add-key.png "Finalización de la creación de la nueva clave")
 
