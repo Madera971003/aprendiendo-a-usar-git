@@ -459,8 +459,14 @@ git checkout <nombre de la rama(branch)>
 Subir las ramas creadas localmente no es muy complicado, y se hace de la siguiente manera:
 
 ```Bash
-git 
+git push origin <nombre de rama>
 ```
+
+![Ramas antes de subir](./assets/rama-antes.png "Ramas antes de subir otra")
+
+![Comando para subir ramas](assets/subir-rama.png "Comando para subir ramas")
+
+![Ramas después de subir](assets/rama-despues.png "Ramas después de subir otras")
 
 ### Merge de una rama con rama Master
 
