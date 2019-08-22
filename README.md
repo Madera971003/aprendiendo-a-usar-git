@@ -466,6 +466,8 @@ git push origin <nombre de rama>
 
 ![Comando para subir ramas](assets/subir-rama.png "Comando para subir ramas")
 
+Así es como se ve en la ventana de Github después de subir una nueva rama al repositorio.
+
 ![Ramas después de subir](assets/rama-despues.png "Ramas después de subir otras")
 
 ### Merge de una rama con rama Master
