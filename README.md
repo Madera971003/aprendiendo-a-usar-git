@@ -12,6 +12,7 @@
     - [Comparación de versión reciente con antigua](#comparaci%c3%b3n-de-versi%c3%b3n-reciente-con-antigua)
     - [Comparación de versión antigua con reciente](#comparaci%c3%b3n-de-versi%c3%b3n-antigua-con-reciente)
     - [Casos de binarios y otros caracteres](#casos-de-binarios-y-otros-caracteres)
+    - [Ventana de características y detalles](#ventana-de-caracter%c3%adsticas-y-detalles)
 
 ## Descarga del programa para tener la terminal de Git Bash
 
@@ -382,6 +383,8 @@ git diff <versión antigua> <versión reciente>
 Esto es lo que pasa si usas caracteres que sean un poco extraño, o de un alfabeto diferente. Pero si te dedicas a la programación por lo regular son solo texto plano. Te hago saber esto para que tengas un poco de cuidado; pero no significa que git no lo pueda manejar, pero si quieres saber más a detalles lo que ha pasado con el documento, puedes abrir directamente el archivo si esto fuera posible.
 
 ![Caracteres no identificados](./assets/caracteres.png "Lo que pasa con caracteres extraños")
+
+### Ventana de características y detalles
 
 Una última forma donde lo puedes visualizar de mejor manera, es con el siguiente comando:
 
