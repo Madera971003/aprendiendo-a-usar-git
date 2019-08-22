@@ -456,6 +456,12 @@ git checkout <nombre de la rama(branch)>
 
 ### Subir ramas a Github
 
+Subir las ramas creadas localmente no es muy complicado, y se hace de la siguiente manera:
+
+```Bash
+git 
+```
+
 ### Merge de una rama con rama Master
 
 ### Eliminar ramas
