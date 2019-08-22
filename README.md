@@ -8,6 +8,10 @@
   - [Creación de un nuevo repositorio](#creaci%c3%b3n-de-un-nuevo-repositorio)
   - [Cómo agregar archivos a un Repositorio desde el Git Bash](#c%c3%b3mo-agregar-archivos-a-un-repositorio-desde-el-git-bash)
   - [Regresar a versiones antiguas](#regresar-a-versiones-antiguas)
+  - [Comparación de versiones de archivos](#comparaci%c3%b3n-de-versiones-de-archivos)
+    - [Comparación de versión reciente con antigua](#comparaci%c3%b3n-de-versi%c3%b3n-reciente-con-antigua)
+    - [Comparación de versión antigua con reciente](#comparaci%c3%b3n-de-versi%c3%b3n-antigua-con-reciente)
+    - [Casos de binarios y otros caracteres](#casos-de-binarios-y-otros-caracteres)
 
 ## Descarga del programa para tener la terminal de Git Bash
 
@@ -255,6 +259,10 @@ Existen algunas formas de cómo puedes visualizar tu historial de trabajo o vers
 
 Las versiones de las primeras líneas, seran las versiones más recientes, mientras que las de abajo, seran las más antiguas.
 
+```Bash
+git log --stat
+```
+
 Muestra todos los comentarios con detalles.
 
 ```Bash
@@ -332,3 +340,59 @@ En la imagen siguiente se muestra la imagen de lo que paso. Te explico.
 Cuando trabajamos en un proyecto subimos modificaciones que no son tan relevantes que esten apareciendo en el historial. Una buena opción es usar el ``--soft`` para ello tienes que primero aplicar en el último cambio la agregación de archivo o archivos: ``git add .`` para que quede en el "aire" tus documentos. Después aplicas el ``git reset <version> --soft``, y por último agregas el comentario y compruebas con ``git log`` y te debió haber eliminado todos los commits intermedios.
 
 ![Comprobación de soft](./assets/final-soft.png "Comprobación de versiones existentes")
+
+## Comparación de versiones de archivos
+
+La comparación de versiones, en muchas ocasiones, suele ser de mucha ayuda siempre y cuando los archivos sean de TEXTO PLANO; si los archivos son de tipo BINARIO, es muy difícil o "imposible" que sepas cuales han sido sus cambios.
+
+El comando que se utiliza es el siguiente:
+
+```Bash
+git diff
+```
+
+![Prueba de git diff](./assets/git-diff.png "Comparación de cambios")
+
+Cuando los archivos ya han sido agregados y colocados con un commit, y aplicas el ``git diff`` no mostrará nada, pero si existe algún cambio reciente, prodras verificar los cambios con el comando.
+
+Existen más formas para visualizar cambios creados.
+
+### Comparación de versión reciente con antigua
+
+Por ejemplo, si quieres ver cual es la diferencia entre la versión actual y alguna de las versiones antiguas, es muy fácil, y lo obtienes con lo siguiente:
+
+```Bash
+git diff <versión reciente> <versión antigua>
+```
+
+![Versión reciente vs versión antigua](./assets/reciente-antigua.png "Versión reciente vs versión reciente")
+
+### Comparación de versión antigua con reciente
+
+También puedes aplicar lo contrario; es básicamente los mismo, pero a la inversa.
+
+```Bash
+git diff <versión antigua> <versión reciente>
+```
+
+![Versión antigua vs reciente](./assets/antigua-reciente.png "Versión antigua vs versión reciente")
+
+### Casos de binarios y otros caracteres
+
+Esto es lo que pasa si usas caracteres que sean un poco extraño, o de un alfabeto diferente. Pero si te dedicas a la programación por lo regular son solo texto plano. Te hago saber esto para que tengas un poco de cuidado; pero no significa que git no lo pueda manejar, pero si quieres saber más a detalles lo que ha pasado con el documento, puedes abrir directamente el archivo si esto fuera posible.
+
+![Caracteres no identificados](./assets/caracteres.png "Lo que pasa con caracteres extraños")
+
+Una última forma donde lo puedes visualizar de mejor manera, es con el siguiente comando:
+
+```Bash
+gitk
+```
+
+El comando anterior te lanzará una ventana como la que aparece abajo, donde puedes configurar que cambios quieres ver.
+
+![Ventana de detalles](./assets/gitk.png "Ventana de detalles")
+
+Si tienes muchos archivos y modificas varios al mismo tiempo, el comando también te lanzará cada una de las diferencias de cada archivo que tienes almacenado.
+
+Si haces todo esto para archivos binarios, te mostrará muchos simbolos que son un poco complejos. Pero como te he mencionado, no significa que este mal el archivo o que sea imposible de subir o guardar.
