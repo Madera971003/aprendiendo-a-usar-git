@@ -14,7 +14,7 @@
     - [Casos de binarios y otros caracteres](#casos-de-binarios-y-otros-caracteres)
     - [Ventana de características y detalles](#ventana-de-caracter%c3%adsticas-y-detalles)
   - [Ramas (Branches)](#ramas-branches)
-    - [Creación de ramas](#creaci%c3%b3n-de-ramas)
+    - [Creación de ramas y moverse en ramas](#creaci%c3%b3n-de-ramas-y-moverse-en-ramas)
       - [Dar permiso a Colaboradores](#dar-permiso-a-colaboradores)
     - [Subir ramas a Github](#subir-ramas-a-github)
     - [Merge de una rama con rama Master](#merge-de-una-rama-con-rama-master)
@@ -424,7 +424,7 @@ Esto es como un árbol.
 
 **Las ramas pueden tener todo el contenido de la rama Master o de alguna otra rama.**
 
-### Creación de ramas
+### Creación de ramas y moverse en ramas
 
 La creación de una rama se hace con el siguiente comando:
 
@@ -435,6 +435,22 @@ git branch <nombre de la rama>
 Si la rama lo creamos desde la rama **Master**, quiere decir que se creará una nueva rama, y al instante se copiará todo el contenido que este tiene a la nueva rama. En cambio si la nueva rama se crea desde otra rama existente, este copiará todo lo que tenga la rama desde donde fue creado.
 
 ![Creación de rama](./assets/creacion-rama.png "Creación de una rama")
+
+En la imagen se ve como si no hubiera pasado nada, pero puedes comprobar con lo siguiente:
+
+```Bash
+git branch
+```
+
+![Ver branches](./assets/ver-branches.png "Visualización de ramas(branches)")
+
+Por último, para cambiarse de rama, se usa lo siguiente:
+
+```Bash
+git checkout <nombre de la rama(branch)>
+```
+
+![Cambiar de rama](./assets/cambio-rama.png "Cambiar de rama")
 
 #### Dar permiso a Colaboradores
 
