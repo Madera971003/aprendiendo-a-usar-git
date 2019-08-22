@@ -13,6 +13,24 @@
     - [Comparación de versión antigua con reciente](#comparaci%c3%b3n-de-versi%c3%b3n-antigua-con-reciente)
     - [Casos de binarios y otros caracteres](#casos-de-binarios-y-otros-caracteres)
     - [Ventana de características y detalles](#ventana-de-caracter%c3%adsticas-y-detalles)
+  - [Ramas (Branches)](#ramas-branches)
+    - [Creación de ramas](#creaci%c3%b3n-de-ramas)
+      - [Dar permiso a Colaboradores](#dar-permiso-a-colaboradores)
+    - [Subir ramas a Github](#subir-ramas-a-github)
+    - [Merge de una rama con rama Master](#merge-de-una-rama-con-rama-master)
+    - [Eliminar ramas](#eliminar-ramas)
+    - [Cambiar de nombre a una rama](#cambiar-de-nombre-a-una-rama)
+    - [Restringir rama Master](#restringir-rama-master)
+  - [Tags](#tags)
+    - [Creación de Tag](#creaci%c3%b3n-de-tag)
+    - [Subir Tag a Github](#subir-tag-a-github)
+    - [Eliminar Tags](#eliminar-tags)
+  - [Clonación de proyectos](#clonaci%c3%b3n-de-proyectos)
+  - [Pull Request](#pull-request)
+    - [Creación de un Pull Request](#creaci%c3%b3n-de-un-pull-request)
+    - [Pedir opiniones o puntos de vista a equipo](#pedir-opiniones-o-puntos-de-vista-a-equipo)
+    - [Merge del Pull Request con master](#merge-del-pull-request-con-master)
+  - [Fork](#fork)
 
 ## Descarga del programa para tener la terminal de Git Bash
 
@@ -399,3 +417,53 @@ El comando anterior te lanzará una ventana como la que aparece abajo, donde pue
 Si tienes muchos archivos y modificas varios al mismo tiempo, el comando también te lanzará cada una de las diferencias de cada archivo que tienes almacenado.
 
 Si haces todo esto para archivos binarios, te mostrará muchos simbolos que son un poco complejos. Pero como te he mencionado, no significa que este mal el archivo o que sea imposible de subir o guardar.
+
+## Ramas (Branches)
+
+Esto es como un árbol.
+
+**Las ramas pueden tener todo el contenido de la rama Master o de alguna otra rama.**
+
+### Creación de ramas
+
+La creación de una rama se hace con el siguiente comando:
+
+```Bash
+git branch <nombre de la rama>
+```
+
+Si la rama lo creamos desde la rama **Master**, quiere decir que se creará una nueva rama, y al instante se copiará todo el contenido que este tiene a la nueva rama. En cambio si la nueva rama se crea desde otra rama existente, este copiará todo lo que tenga la rama desde donde fue creado.
+
+![Creación de rama](./assets/creacion-rama.png "Creación de una rama")
+
+#### Dar permiso a Colaboradores
+
+### Subir ramas a Github
+
+### Merge de una rama con rama Master
+
+### Eliminar ramas
+
+### Cambiar de nombre a una rama
+
+### Restringir rama Master
+
+## Tags
+
+### Creación de Tag
+
+### Subir Tag a Github
+
+### Eliminar Tags
+
+## Clonación de proyectos
+
+## Pull Request
+
+### Creación de un Pull Request
+
+### Pedir opiniones o puntos de vista a equipo
+
+### Merge del Pull Request con master
+
+## Fork
