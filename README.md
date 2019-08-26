@@ -17,7 +17,8 @@
     - [Creación de ramas y moverse en ramas](#creaci%c3%b3n-de-ramas-y-moverse-en-ramas)
       - [Dar permiso a Colaboradores](#dar-permiso-a-colaboradores)
     - [Subir ramas a Github](#subir-ramas-a-github)
-    - [Merge de una rama con rama Master](#merge-de-una-rama-con-rama-master)
+    - [Merge de una rama con otra](#merge-de-una-rama-con-otra)
+      - [Cherry Pick](#cherry-pick)
     - [Eliminar ramas](#eliminar-ramas)
     - [Cambiar de nombre a una rama](#cambiar-de-nombre-a-una-rama)
     - [Restringir rama Master](#restringir-rama-master)
@@ -454,6 +455,22 @@ git checkout <nombre de la rama(branch)>
 
 #### Dar permiso a Colaboradores
 
+Para agregar colaboradores a un repositorio, lo haces desde tu GitHub.
+
+* **Paso 1:** primero vas a tus repositorios de tu cuenta, y selecionas el repositorio al que deseas agregar colaboradores.
+
+* **Paso 2:** ahora vas a los "settings" del repositorio y te aparecerá algo como la siguiente imagen:
+
+![Configuración de repositorio](./assets/agregar-colaboradores.png "Configuración de un repositorio")
+
+* **Paso 3:** se da clic en la opción de Collaborators; saldrá una nueva ventana como la imagen de abajo, y allí podrás buscar al colaborador; puedes colocar el correo del colaborador, o en caso que no funcione, también puedes probar con el nombre de usuario.
+
+![Busqueda de colaboradores](./assets/buscando-colaboradores.png "Busqueda de colaboradores")
+
+* **Paso 4:** por último, solo das clic en "Add Collaborator".
+
+El colaborador deberá ir a su correo donde verá reflejado la invitación, y él o ella aceptará si así lo desea.
+
 ### Subir ramas a Github
 
 Subir las ramas creadas localmente no es muy complicado, y se hace de la siguiente manera:
@@ -470,11 +487,67 @@ Así es como se ve en la ventana de Github después de subir una nueva rama al r
 
 ![Ramas después de subir](assets/rama-despues.png "Ramas después de subir otras")
 
-### Merge de una rama con rama Master
+### Merge de una rama con otra
+
+Los "Merges", son muy útiles en el preoceso de desarrollo de un proyecto. Esto sólo se puede utilizar siempre y cuando se tengan otras ramas.
+
+* **Paso 1:** primero debes saber qué ramas quieres unir, y de qué rama a qué rama quieres que se pasen las actualizaciones o modificaciones realizadas.
+
+* **Paso 2:** ya que sabes en que rama deben quedar las actualizaciones, te cambias a esa rama con un ``git checkout <nombre de la rama>``; estando en la rama deseada, escribes el siguiente comando:
+
+```Bash
+git merge <nombre de la rama para hacer la unión>
+```
+
+Los merges funcionan entre ramas, así como con el master. Puedes hacer un merge llevando los datos del master a una rama así también de una rama al master.
+
+Es muy importante tener cuidado con el uso de este comando. Si estas trabajando con un equipo en alguna empresa, trata de no usar este comando con la rama MASTER, al menos que tu seas el responsable de hacer estos tipos de cambios.
+
+Te recomiendo que crees alguna carpeta muy aparte de tu proyecto y practiques y veas todo lo que podría pasar.
+
+#### Cherry Pick
+
+Cherry Pick se trata de hacer un "merge" por así decirlo, entre una rama y alguna VERSIÓN de otra. Esto se usa cuando ya tenes una parte del proyecto funcionando y sigues avanzando, pero quieres mandar solo hasta un cierto punto de lo que has trabajado. Para ello usas el Cherry Pick.
+
+El siguiente comando lo aplicas desde la rama que llamará los cambios de otra.
+
+```Bash
+git cherry-pick <Version para hacer la unión>
+```
+
+Muchos dicen que el uso de este comando es una mala práctica; así que recomendaría que lo uses en caso de ser necesario.
 
 ### Eliminar ramas
 
+Para eliminar una rama no es muy difícil. Pero se debe de tener cuidado con el uso del comando.
+
+El siguiente comando te mostrará algunos detalles de la rama, y te advierte si estas seguro:
+
+```Bash
+git branch -d <nombre de la rama a eliminar>
+```
+
+El siguiente comando es cuanto estas seguro de eliminar la rama:
+
+```Bash
+git branch -D <Nombre de la rama a eliminar>
+```
+
 ### Cambiar de nombre a una rama
+
+Si por escribir rápido, te das cuenta que el nombre de la rama que creaste esta mal; hay alguna forma de cómo cambiar al nombre correcto.
+
+En el primer caso, estando desde la rama que creaste, colocas lo siguiente:
+
+```Bash
+git branch -m <Nombre corregido de la rama>
+```
+
+En el segundo caso; estando desde otra rama. Para esto, usas lo siguiente:
+
+```Bash
+git branch -m <Nombre de la rama a corregir> <Nombre corregido de la rama>
+```
 
 ### Restringir rama Master
 
