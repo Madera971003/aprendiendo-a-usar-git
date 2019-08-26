@@ -553,7 +553,33 @@ git branch -m <Nombre de la rama a corregir> <Nombre corregido de la rama>
 
 ## Tags
 
+Si ya sabes que son los Tags, puedes saltarte esta pequeña parte.
+
+Los Tags son cuando quieres crear versiones de tu trabajo. Imagina un programa, cuando por lo regular lanzan un nuevo programa, es muy común ver las versiones que lanzan, por ejemplo: "Versión 1.02.1", o cosas por el estilo.
+
+Lo mismo pasa con nuestro proyecto. Cuando ya tienen una versión funcionando y quieren lanzarlo, o cuando quieren marcar el momento en que su proyecto ha estado funcionando de manera correcta, y que si llega a pasar un desastre 😐 después, puedan saber el momento exacto al que deban regresar.
+
+Los Tags te sirven para llevar un buen control en tus proyectos.
+
+Mas adelante te explico algunas de las tareas básicas de los Tags.
+
 ### Creación de Tag
+
+* **Paso 1:** primero se debe de conocer la versión a la que se le va aplicar un Tag
+
+Antes del siguiente paso, una recomendación muy importante, es que el equipo de trabajo debe saber los nombres que usaran a las versiones. Por ejemplo algo muy común es usar: `v0.1` ... `v0.2` ... etc.
+
+* **Paso 2:** ya que copiaste el código del commit donde se le va aplicar el Tag, aplicas el siguiente código.
+
+```Bash
+git tag -a <Nombre de la versión> -m "Algún comentario con las comillas" <La versión que llevará el Tag>
+```
+
+![Creación de un tag](./assets/nuevo-tag.png "Creación de un tag")
+
+* **Paso 3:** solo si quieres verificar que el tag se realizó de manera corecta; puedes usar algún tipo de `git log`.
+
+![Verificación de versión](./assets/verificacion-de-tag.png "Verificando la existencia del Tag")
 
 ### Subir Tag a Github
 
